@@ -22,7 +22,7 @@ app.controller("pollIndex", function (pollFactory, $scope, $filter, $location) {
     },
 
     $scope.reload = function(){
-      $location.reload(true)
+      location.reload(true)
       // delete $scope.username
       // pollFactory.logout()
       // console.log("$scope username value = ", $scope.username)
