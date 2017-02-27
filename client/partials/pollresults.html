@@ -1,0 +1,26 @@
+<!--
+    /client/partials/pollconfigure.html
+    View / Template for the form to create a new item
+-->
+
+<h2>{{onepoll.title}}</h2>
+
+<table>
+  <tr><th>Option</th><th>Current Count of Votes</th><th>Action</th></tr>
+  <tr>
+    <td>{{onepoll.option_one[0]}}</td>
+    <td align='center'>{{onepoll.option_one[1]}}</td>
+    <td ng-click="vote(onepoll._id, 1, onepoll)"><button>vote</button></td></tr>
+  <tr>
+    <td>{{onepoll.option_two[0]}}</td><td align='center'>{{onepoll.option_two[1]}}</td>
+    <td ng-click="vote(onepoll._id, 2, onepoll)"><button>vote</button></td></tr>
+  <tr>
+    <td>{{onepoll.option_three[0]}}</td><td align='center'>{{onepoll.option_three[1]}}</td>
+    <td ng-click="vote(onepoll._id, 3, onepoll)"><button>vote</button></td></tr>
+  <tr>
+    <td>{{onepoll.option_four[0]}}</td><td align='center'>{{onepoll.option_four[1]}}</td>
+    <td ng-click="vote(onepoll._id, 4, onepoll)"><button>vote</button></td></tr>
+</table>
+<br>
+<a href="#!/all">back to polls</a>
+<!-- string-to-number ng-model="onepoll.option_one[1]" -->

@@ -1,0 +1,23 @@
+<!--
+    /client/partials/pollindex.html
+    View / Template for showing all items
+-->
+
+
+<h3>Current Polls:</h3>
+
+<input type="text" ng-model='p.title'>
+<br><br>
+<table>
+  <tr><th width='75px'>Name</th><th>Survey Question</th><th>Date Posted</th><th>Action</th></tr>
+  <tr ng-repeat="p in polls | filter: p.title" ng-init='idx=$index'>
+    <td>{{p.username}}</td>
+    <td><a href="#!/result/{{idx}}">{{p.title}}</a></td>
+    <td>{{p.createdAt | date: MM/DD/YYYY}}</td>
+    <td ng-if="p.username == username" ng-click='delete($index, p._id)'><button>delete</button></td>
+  </tr>
+</table>
+<br><br>
+<a href="#!/create">Create a New Poll</a>
+<br><br>
+<button ng-click='reload()'>logout</button>

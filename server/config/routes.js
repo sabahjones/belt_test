@@ -4,11 +4,12 @@
 */
 console.log("Loaded /server/config/routes.js");
 
-var ItemsController = require("../controllers/items");
+var PollController = require("../controllers/polls");
 
 module.exports = function (app) {
 
-    app.get("/items", ItemsController.index)  // Controller get items
-    app.post("/items", ItemsController.create)  // Controller create items
-
+    app.get("/polls", PollController.get)  // Controller get polls
+    app.post("/addpoll", PollController.add)  // Controller create a poll
+    app.put("/delete/:id", PollController.delete)
+    app.post("/polls", PollController.update)
 };

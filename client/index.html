@@ -3,20 +3,23 @@
     Entry point for client.  Requires all necessary client files.
 -->
 <!DOCTYPE html>
-<html lang="en" ng-app="itemsApp">
+<html ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Items App</title>
+    <title>Belt Exam - Posts in MEAN</title>
     <script src="angular/angular.js"></script>
     <script src="angular-route/angular-route.js"></script>
     <script src="config.js"></script>
-    <script src="factories/item.js"></script>
-    <script src="controllers/items-index.js"></script>
-    <script src="controllers/new-item.js"></script>
+    <script src="factories/poll.js"></script>
+    <script src="controllers/pollIndex.js"></script>
+    <script src="controllers/pollconfigure.js"></script>
+    <script src="controllers/pollresults.js"></script>
+    <script src="controllers/login.js"></script>
 </head>
+
 <body>
 
-    <div ng-view=""></div>
-    
+    <div ng-view></div>
+
 </body>
 </html>

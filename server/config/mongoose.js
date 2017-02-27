@@ -5,6 +5,6 @@
 console.log("Loaded /server/config/mongoose.js");
 
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/items-are-mean");
+mongoose.connect("mongodb://localhost/belt_polls");
 
-require("../models/item");
+require("../models/poll");
